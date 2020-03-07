@@ -1,0 +1,84 @@
+.checkout-success {
+    display: none;
+}
+
+.container-heart {
+    margin: 0 auto;
+    padding: 100px;
+    position: relative;
+    transform: rotate(45deg);
+    width: 100px;
+}
+
+/* Add container to heart graphic. */
+
+.heart {
+    background: salmon;
+    height: 100px;
+    position: relative;
+    width: 100px;
+
+    animation-name: heartBeat;
+    -webkit-animation-name: heartBeat;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+}
+
+/* Style heart graphic. Define it's animation perameters. */
+
+.heart:before {
+    background: salmon;
+    border-radius: 50%;
+    content: "";
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    width: 100px;
+}
+
+/* Defines graphic perameters before animation start. */
+
+.heart:after {
+    background: salmon;
+    border-radius: 50%;
+    content: "";
+    height: 100px;
+    left: -50px;
+    position: absolute;
+    width: 100px;
+}
+
+/* Defines graphic peramters after animation ends. */
+
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1.05);
+    }
+
+    45% {
+        transform: scale(1.25);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+
+    /* These keyframes define the scale at which the heart graphic will change at each given percentage of the time allocated for each itteration of the animation. */
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/site.css" />
+  <!--Links to bootstrap and css-->
+    <title>Craig's Petshop Shop</title>
+</head>
+
+<body>
+    <header>
+        <div class="bg-dark collapse" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">Welcome to my Petshop!.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- In this div we create a header. It is styled and alligned with bootstrap. And contains a few dead links. -->
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a id="linkHome" href="index.html" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <strong>Craig's Pet Shop</strong>
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- In this div we create a Navbar for our header that can toggle (This is our required hiding and showing feature). It is styled and alligned with bootstrap. A heading and shopping cart button has also been added. -->
+    </header>
+    <main role="main">
+        <section class="jumbotron text-center mb-0">
+            <div class="container">
+                <h1>Shopping Cart</h1>
+                <p class="lead text-muted">You're almost there!</p>
+            </div>
+        </section>
+        <!-- We use a section tag to create a bootstrap jumbotron. It is added for visual appearance to ease the time contraints of further tasks that use this task as a baseline. -->
+        <div class="album py-5 bg-light">
+            <div class="container checkout">
+                <!-- We add a checkout container. -->
+                <div class="row">
+                    <div class="col-md-4 order-md-2 mb-4">
+                        <div class="alert alert-info" role="alert">
+                            Opening special, use the promo code <br /><strong>PROMO</strong> and get R50 off! (delivery only!)
+                        </div>
+                        <!-- We tell the user about the promotional code, it is only available on delivery, not collection sales. -->
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Your cart</span>
+                            <button id="btnClearCart" class="btn btn-small btn-primary">empty cart</button>
+                            <span id="itemCount" class="badge badge-secondary badge-pill"></span>
+                            <!-- We create a cart and implement a clear cart button. -->
+                        </h4>
+                        <ul id="cart-content" class="list-group mb-3"></ul>
+                        <form class="card p-2">
+                            <div class="input-group">
+                                <input id="txtPromocode" type="text" class="form-control" placeholder="Promo code">
+                                <div class="input-group-append">
+                                    <button id="btnRedeemPromocode" type="button" class="btn btn-secondary">Redeem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- We implement the necessary fields to allow the user to input a promo code. We create a button that will apply the promo code. -->
+                    <div class="col-md-8 order-md-1">
+                        <h4 class="mb-3">Delivery Options</h4>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="delivery-tab" data-toggle="tab" href="#delivery" role="tab" aria-controls="delivery" aria-selected="true">Delivery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="collect-tab" data-toggle="tab" href="#collect" role="tab" aria-controls="collect" aria-selected="false">Collect</a>
+                            </li>
+                        </ul>
+                        <!-- We set out the available delivery options and aloow the user to toggle between selections. -->
+                        <div class="tab-content pt-4" id="myTabContent">
+                            <div class="tab-pane fade show active" id="delivery" role="tabpanel" aria-labelledby="delivery-tab">
+                                <form class="needs-validation" novalidate="">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName">First name</label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                                            <div class="invalid-feedback">
+                                                Valid first name is required.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email2">Email</label>
+                                            <input type="email" class="form-control" id="email1" placeholder="you@example.com">
+                                            <div class="invalid-feedback">
+                                                Please enter a valid email address for shipping updates.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address">Address</label>
+                                        <textarea class="form-control" id="address" placeholder="1234 Main St" required=""></textarea>
+                                        <div class="invalid-feedback">
+                                            Please enter your shipping address.
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="collect" role="tabpanel" aria-labelledby="collect-tab">
+                                <p>Please provide your email address and we will send you all the details</p>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email2">Email</label>
+                                        <input type="email" class="form-control" id="email2" placeholder="you@example.com">
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for shipping updates.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- We create a form in which we can capture the necessary user details that are used to ship the product. -->
+                                <address>
+                                    <strong>Craig's Pet Shop.</strong><br>
+                                    1235 Green St, Unit 646<br>
+                                    Cape Town, South Africa<br>
+                                    021 344 4443
+                                </address>
+                                <!-- We display our address to the user in the event that they wish to collect. -->
+                            </div>
+                        </div>
+                        <hr class="mb-4">
+                        <form class="needs-validation" novalidate="">
+                            <h4 class="mb-3">Payment</h4>
+                            <div class="d-block my-3">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-name">Name on card</label>
+                                        <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                                        <small class="text-muted">Full name as displayed on card</small>
+                                        <div class="invalid-feedback">
+                                            Name on card is required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-number">Credit card number</label>
+                                        <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                                        <div class="invalid-feedback">
+                                            Credit card number is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">Expiration</label>
+                                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                                        <div class="invalid-feedback">
+                                            Expiration date required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-cvv">CVV</label>
+                                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                                        <div class="invalid-feedback">
+                                            Security code required
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <button id="btnCheckout" class="btn btn-primary btn-lg btn-block" type="button">Confirm order</button>
+                            </div>
+                        </form>
+                        <!-- We create a form that the user can input their payment details (credit card details). We add a button that confirms the order. Clicking the button will take the user to the completed order container. This displays our required graphic as well as a "confirmation of order". It can be exited on page refresh. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container checkout-success">
+            <div class='container-heart'>
+                <div class='heart'></div>
+            </div>
+            <!-- we add a div to hold our heart graphic -->
+            <div class="row">
+                <div class="col-12">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-muted p-3">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+        <!-- We add a back to top feature within our footer. It simply refreshes the page. -->
+    </footer>
+    <!-- Further scripts are linked below. We have jQuery first, then Popper.js, then Bootstrap JS. Bootstrap has been stored locally and is contained within the shop tasks folder. -->
+      <script src="lib/bootstrap/jquery-3.4.1.slim.min.js"></script>
+  <script src="lib/bootstrap/popper.min.js"></script>
+  <script src="lib/bootstrap/bootstrap.min.js"></script>
+
+  <script src="js/site.js"></script>
+  <script type="text/javascript">
+
+    // render shopping cart items:
+    let cart = getCart();
+
+    let ul = document.getElementById('cart-content');
+    $("#itemCount").html(cart.items.length);
+
+    $.each(cart.items, function (i, el) {
+      ul.innerHTML +=
+        `<li class="list-group-item d-flex justify-content-between lh-condensed"> 
+            <div>
+              <h6 class="my-0">` + el.name + `</h6>
+            </div>
+            <span class="text-muted"> R` + el.price + `</span>
+        </li>`;
+    });
+
+    if (cart.promocodes != null) {
+      $.each(cart.promocodes, function (i, el) {
+        if (el.deliveryOption == null || el.deliveryOption == cart.deliveryOption) {
+          ul.innerHTML +=
+            `<li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Promo code</h6>
+              <small>` + el.code + `</small>
+            </div>
+            <span class="text-success">-R` + el.amount + `</span>
+          </li>`;
+        }
+      });
+    }
+
+    if (cart.items.length > 0) {
+      ul.innerHTML +=
+        `<li class="list-group-item d-flex justify-content-between">
+            <span>VAT</span>
+            <span class="text-muted">R` + cart.vat + `</span>
+        </li>`;
+    }
+
+    ul.innerHTML +=
+      `<li class="list-group-item d-flex justify-content-between">
+          <span>Total (ZAR)</span>
+          <strong>R` + cart.total + `</strong>
+      </li>`;
+
+    // add promo code:
+    $("#btnRedeemPromocode").click(function () {
+
+      let promocode = $("#txtPromocode").val();
+      if (promocode != '') {
+        addPromocodeToCart(promocode);
+
+        alert(promocode + ' was redeemed');
+        location.reload();
+      }
+    });
+
+    // checkout order:
+    $("#btnCheckout").click(function () {
+
+      emptyCart();
+
+      let referenceNumber = Math.floor(100000 + Math.random() * 900000);
+      alert('Payment successful, your order is on it\'s way! Reference number: ' + referenceNumber);
+
+      $(".jumbotron h1").text('Order Confirmed!');
+      $(".jumbotron p").text('Thank you for placing an order with us, you should receive an email invoice.');
+      $(".container.checkout").hide();
+      $(".container.checkout-success").show();
+    });
+
+    // clear shopping cart:
+    $("#btnClearCart").click(function () {
+
+      emptyCart();
+
+      alert('Cart was emptied');
+      location.reload();
+
+    });
+
+    // set selected delivery option:
+    if (cart.deliveryOption != '') {
+      let tabName = cart.deliveryOption.toLowerCase();
+      $('#myTab a[href="#' + tabName + '"]').tab('show')
+    }
+
+    $('#myTab a').on('click', function (e) {
+
+      setCartDeliveryOption(e.target.text);
+      location.reload();
+
+    });
+
+  </script>
+</body>

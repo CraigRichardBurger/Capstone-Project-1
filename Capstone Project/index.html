@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Required meta tags. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+    <!-- Link to Bootstrap. -->
+    <link rel="stylesheet" href="css/site.css" />
+    <!-- link to CSS. -->
+    <title>Craig's Pet Shop</title>
+</head>
+
+<body>
+    <header>
+        <div class="bg-dark collapse" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">My name is Craig and welcome to my amazing Pet shop.</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- In this div we create a header. It is styled and alligned with bootstrap. And contains a few dead links. -->
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a id="linkHome" href="index.html" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <strong>Craig's Pet Shop</strong>
+                </a>
+                <a class="btn btn-primary text-white" href="cart.html">View shopping cart</a>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!-- In this div we create a Navbar for our header that can toggle (This is our required hiding and showing feature). It is styled and alligned with bootstrap. A heading and shopping cart button has also been added. -->
+    </header>
+    <main role="main">
+        <section class="jumbotron text-center mb-0">
+            <div class="container">
+                <h1>Craig's Pet Shop</h1>
+                <p class="lead text-muted">Welcome to the most amazing shop ever - we sell everything from food to toys</p>
+            </div>
+        </section>
+        <!-- We use a section tag to create a bootstrap jumbotron. It is added for visual appearance to ease the time contraints of further tasks that use this task as a baseline. -->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="gfx/images/img1.png" alt="img1" class="w-100" />
+                            <div class="card-body">
+                                <p class="card-text">Doggy Chews. Full of nutrients and teeth cleaning goodness.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="btnProduct1" type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <span class="text-muted">R200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- We create letious divs above and below that will contain our products. They hold info, images, prices and an add to cart button. -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="gfx/images/img2.png" alt="img2" class="w-100" />
+                            <div class="card-body">
+                                <p class="card-text">Hills Pet Science Cat Food. Formulated for a happy healthy pet.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="btnProduct2" type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <span class="text-muted">R360</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- All products have been styled with bootstrap. Images are stored in the gfx folder withing the subfolder images. -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="gfx/images/img3.png" alt="img3" class="w-100" />
+                            <div class="card-body">
+                                <p class="card-text">A bright red and safe rubber ball for your dog. Hours of fun!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="btnProduct3" type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <span class="text-muted">R200</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="gfx/images/img4.png" alt="img4" class="w-100" />
+                            <div class="card-body">
+                                <p class="card-text">A Bunny house. Constructed from safe materials. Give your pet a home not just a house.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="btnProduct4" type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <span class="text-muted">R900</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="gfx/images/img5.png" alt="img5" class="w-100" />
+                            <div class="card-body">
+                                <p class="card-text">Hills Pet Science Dog Food. Formulated for a happy healthy pet
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button id="btnProduct5" type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                                    <span class="text-muted">R360</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-muted p-3">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+        <!-- We add a back to top feature within our footer. It simply refreshes the page. -->
+    </footer>
+    <!-- Further scripts are linked below. We have jQuery first, then Popper.js, then Bootstrap JS. Bootstrap has been stored locally and is contained within the shop tasks folder. -->
+    <script src="lib/bootstrap/jquery-3.4.1.slim.min.js"></script>
+    <script src="lib/bootstrap/popper.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="js/site.js"></script>
+    <script type="text/javascript">
+    $("#btnProduct1").click(function() {
+        addProductToCart({ id: 1, name: 'Dog Chews', price: 200 });
+    });
+
+    $("#btnProduct2").click(function() {
+        addProductToCart({ id: 2, name: 'Cat Food', price: 360 });
+    });
+
+    $("#btnProduct3").click(function() {
+        addProductToCart({ id: 3, name: 'Red Ball', price: 200 });
+    });
+
+    $("#btnProduct4").click(function() {
+        addProductToCart({ id: 4, name: 'Rabbit House', price: 900 });
+    });
+
+    $("#btnProduct5").click(function() {
+        addProductToCart({ id: 5, name: 'Dog Food', price: 360 });
+    });
+    </script>
+    <!-- The above functions are used to add the products to the cart when the add to cart button is pressed. -->
+</body>
+
+</html>
