@@ -42,3 +42,14 @@ You can download the project and run the webstore by opening the Cart or Index H
 ::CREDITS::
 
 Project creator / editor / and owner of images: Craig Richard Burger
+
+::SCREENSHOTS::
+
+-Also available in issues-
+
+![Add to Cart](https://user-images.githubusercontent.com/54321761/76144827-afd6cf80-608c-11ea-866e-ba4f8e433276.jpg)
+![Apply Coupon](https://user-images.githubusercontent.com/54321761/76144829-b1a09300-608c-11ea-80db-6e44f4476e6f.jpg)
+![Coupon Applied](https://user-images.githubusercontent.com/54321761/76144831-b402ed00-608c-11ea-9f49-78b14f263daf.jpg)
+![Empty Cart Applied](https://user-images.githubusercontent.com/54321761/76144832-b49b8380-608c-11ea-9497-b76c8b4d3164.jpg)
+![Empty Cart](https://user-images.githubusercontent.com/54321761/76144833-b6654700-608c-11ea-9ae9-a7fb7efa6883.jpg)
+![Index](https://user-images.githubusercontent.com/54321761/76144835-b7967400-608c-11ea-90b6-91b88071ddd3.jpg)
