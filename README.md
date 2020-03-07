@@ -1,6 +1,8 @@
 ::PROJECT NAME::
 
 Level-1-Capstone
+
+
 ::PROJECT DESCRIPTION AND IMPORTANCE::
 
 This is a collection of work from my Level 1 web dev capstone. It's a basic online store that consolidates previously
@@ -13,6 +15,7 @@ business functions. The project is not fully functional at this stage.
 
 You are able to view an online store. Add products to a cart and apply coupon discount codes. The store uses jQuery,
 Javascript, HTML and CSS. It is styled with bootstrap which is stored within the project files under lib.
+
 
 ::CONTENTS::
 
@@ -30,9 +33,11 @@ Screenshots of the project.
 
 This project does not need installation.
 
+
 ::USAGE::
 
 You can download the project and run the webstore by opening the Cart or Index HTML pages using a web browser.
+
 
 ::CREDITS::
 
