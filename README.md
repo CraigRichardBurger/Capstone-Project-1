@@ -19,14 +19,21 @@ Javascript, HTML and CSS. It is styled with bootstrap which is stored within the
 
 ::CONTENTS::
 
-CSS styling files.
-Graphics and images.
-Javascript functionality files.
-a library for Bootstrap and jQuery.
-An index HTML file which acts as the stores Homepage and product page.
-A cart HTML file which acts as the stores Checkout and Cart page. It also contains JS functions below the HTML body.
-A requirements PDF detailing the required specs for the project.
-Screenshots of the project.
+*CSS styling files.
+
+*Graphics and images.
+
+*Javascript functionality files.
+
+*a library for Bootstrap and jQuery.
+
+*An index HTML file which acts as the stores Homepage and product page.
+
+*A cart HTML file which acts as the stores Checkout and Cart page. It also contains JS functions below the HTML body.
+
+*A requirements PDF detailing the required specs for the project.
+
+*Screenshots of the project.
 
 
 ::INSTALLATION::
